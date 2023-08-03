@@ -123,13 +123,14 @@ const App = () => {
       setIsError(false)
 
       personService
-        .update(personToUpdate.id,{ name: newName, number: newNumber})
+        .update(personToUpdate.id,{ name: newName, number: newNumber, _id: personToUpdate.id})
           .then(returnedPerson => {  
             setPersons(persons.filter(p => p.name !== newName).concat(returnedPerson))  
             setNewName('')
             setNewNumber('')
           })
           .catch(error => {
+            console.log(error)
             setIsError(true)
             setNotification('failed to add new person info to server')
           })

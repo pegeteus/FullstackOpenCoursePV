@@ -1,0 +1,8 @@
+PUT http://localhost:3001/api/persons/64cba90066c7caaf4b4c7418 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Keijo Kivekäs",
+    "number": "033-4455",
+    "id": "64cba90066c7caaf4b4c7418"
+}
